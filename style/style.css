@@ -4,7 +4,14 @@
 }
 
 nav.nav-color {
-  background-color: #090909 !important;
+  background-color: #060606 !important;
+}
+header{
+  margin-bottom: 0;
+}
+
+main {
+  margin-top: 0;
 }
 
 .carousel-caption {
@@ -12,6 +19,7 @@ nav.nav-color {
   justify-content: center;
   align-content: center;
 }
+
 
 
 .main-cards {
@@ -24,10 +32,7 @@ nav.nav-color {
 .section-Title {
   display: block;
   width: 100%;
-  align-items: center;
   justify-content: center;
-
-
 }
 
 .containerCards {
@@ -35,6 +40,7 @@ nav.nav-color {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -82,7 +88,7 @@ nav.nav-color {
 
 }
 
-h2 {
+h5 {
   color: #f3a735;
 }
 
@@ -107,10 +113,39 @@ h2 {
 }
 
 .questions {
-  margin: 1rem
+  padding: 40px;
 }
 
+.form-container{
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  gap: 1rem;
+}
 
+input,
+select,
+textarea{
+  padding: 1.4rem;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+textarea{
+  height: 6rem;
+}
+
+.form-button{
+  width: 8rem;
+  padding: 1.4 rem;
+  background-color: #4b4c4d;
+  color: white;
+  border-radius: 15px;
+}
 
 .footer-basic {
   padding: 40px 0;
