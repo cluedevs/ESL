@@ -1,587 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
-    />
-    <title>ESL</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+		/>
+		<title>ESL</title>
+	</head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-color">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">RENTAL CARS</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
-              <li class="nav-item ms-5">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item ms-5">
-                <a class="nav-link" href="#">Cars</a>
-              </li>
-              <li class="nav-item ms-5">
-                <a class="nav-link" href="#scrollspyHowToRent">How to rent?</a>
-              </li>
-              <li class="nav-item ms-5">
-                <a class="nav-link" href="#scrollspyFQA">F.A.Q</a>
-              </li>
-              <li class="nav-item ms-5">
-                <a class="nav-link" href="rentYourCar.html">Rent your car</a>
-              </li>
-              <li class="nav-item ms-5">
-                <a class="nav-link" href="contactUs.html">Contact Us</a>us</a>
-              </li>
-            </ul>
-            <div class="d-flex">
-              <ul class="navbar-nav d-none d-md-block">
-                <!-- Login button: show if NOT authenticated -->
-                <li class="nav-item auth-invisible">
-                  <button
-                    id="qsLoginBtn"
-                    onclick="login()"
-                    class="btn btn-primary btn-margin auth-invisible hidden btn-login"
-                  >
-                    Log in
-                  </button>
-                </li>
-                <!-- / Login button -->
-                <!-- Fullsize dropdown: show if authenticated -->
-                <li class="nav-item dropdown auth-visible hidden li-login">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="profileDropDown"
-                    data-toggle="dropdown"
-                  >
-                    <!-- Profile image should be set to the profile picture from the id token -->
-                    <img
-                      alt="Profile picture"
-                      class="nav-user-profile profile-image rounded-circle"
-                      width="50"
-                    />
-                  </a>
-                  <div class="dropdown-menu">
-                    <!-- Show the user's full name from the id token here -->
-                    <div class="dropdown-header nav-user-name user-name"></div>
-                    <a
-                      href="/profile"
-                      class="dropdown-item dropdown-profile route-link"
-                    >
-                      <i class="fas fa-user mr-3"></i> Profile
-                    </a>
-                    <a
-                      href="#"
-                      class="dropdown-item"
-                      id="qsLogoutBtn"
-                      onclick="logout()"
-                    >
-                      <i class="fas fa-power-off mr-3"></i> Log out
-                    </a>
-                  </div>
-                </li>
-              <!-- /Fullsize dropdown -->
-            </ul>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-color">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">RENTAL CARS</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+							<li class="nav-item ms-5">
+								<a class="nav-link" aria-current="page" href="#">Home</a>
+							</li>
+							<li class="nav-item ms-5">
+								<a class="nav-link" href="#">Cars</a>
+							</li>
+							<li class="nav-item ms-5">
+								<a class="nav-link" href="#scrollspyHowToRent">How to rent?</a>
+							</li>
+							<li class="nav-item ms-5">
+								<a class="nav-link" href="#scrollspyFQA">F.A.Q</a>
+							</li>
+							<li class="nav-item ms-5">
+								<a class="nav-link" href="rentYourCar.html">Rent your car</a>
+							</li>
+							<li class="nav-item ms-5">
+								<a class="nav-link" href="contactUs.html">Contact Us</a>
+							</li>
+						</ul>
+						<div class="d-flex">
+							<ul class="navbar-nav d-none d-md-block">
+								<!-- Login button: show if NOT authenticated -->
+								<li class="nav-item auth-invisible">
+									<button
+										id="qsLoginBtn"
+										onclick="login()"
+										class="btn btn-primary btn-margin auth-invisible hidden btn-login"
+									>
+										Log in
+									</button>
+								</li>
+								<!-- / Login button -->
+								<!-- Fullsize dropdown: show if authenticated -->
+								<li class="nav-item dropdown auth-visible hidden li-login">
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="profileDropDown"
+										data-toggle="dropdown"
+									>
+										<!-- Profile image should be set to the profile picture from the id token -->
+										<img
+											alt="Profile picture"
+											class="nav-user-profile profile-image rounded-circle"
+											width="50"
+										/>
+									</a>
+									<div class="dropdown-menu">
+										<!-- Show the user's full name from the id token here -->
+										<div class="dropdown-header nav-user-name user-name"></div>
+										<a
+											href="/profile"
+											class="dropdown-item dropdown-profile route-link"
+										>
+											<i class="fas fa-user mr-3"></i> Profile
+										</a>
+										<a
+											href="#"
+											class="dropdown-item"
+											id="qsLogoutBtn"
+											onclick="logout()"
+										>
+											<i class="fas fa-power-off mr-3"></i> Log out
+										</a>
+									</div>
+								</li>
+								<!-- /Fullsize dropdown -->
+							</ul>
 
-            <!-- Responsive login button: show if NOT authenticated -->
-            <ul class="navbar-nav d-md-none auth-invisible">
-              <button
-                class="btn btn-primary btn-block auth-invisible hidden"
-                id="qsLoginBtn"
-                onclick="login()"
-              >
-                Log in
-              </button>
-            </ul>
-            <!-- /Responsive login button -->
+							<!-- Responsive login button: show if NOT authenticated -->
+							<ul class="navbar-nav d-md-none auth-invisible">
+								<button
+									class="btn btn-primary btn-block auth-invisible hidden"
+									id="qsLoginBtn"
+									onclick="login()"
+								>
+									Log in
+								</button>
+							</ul>
+							<!-- /Responsive login button -->
 
-            <!-- Responsive profile dropdown: show if authenticated -->
-            <ul
-              class="
-                navbar-nav
-                d-md-none
-                auth-visible
-                hidden
-                justify-content-between
-              "
-              style="min-height: 125px"
-            >
-              <li class="nav-item">
-                <span class="user-info">
-                  <!-- Profile image should be set to the profile picture from the id token -->
-                  <img
-                    alt="Profile picture"
-                    class="
-                      nav-user-profile
-                      d-inline-block
-                      profile-image
-                      rounded-circle
-                      mr-3
-                    "
-                    width="50"
-                  />
-                  <!-- Show the user's full name from the id token here -->
-                  <h6 class="d-inline-block nav-user-name user-name"></h6>
-                </span>
-              </li>
-              <li>
-                <i class="fas fa-user mr-3"></i>
-                <a href="/profile" class="route-link">Profile</a>
-              </li>
+							<!-- Responsive profile dropdown: show if authenticated -->
+							<ul
+								class="navbar-nav d-md-none auth-visible hidden justify-content-between"
+								style="min-height: 125px"
+							>
+								<li class="nav-item">
+									<span class="user-info">
+										<!-- Profile image should be set to the profile picture from the id token -->
+										<img
+											alt="Profile picture"
+											class="nav-user-profile d-inline-block profile-image rounded-circle mr-3"
+											width="50"
+										/>
+										<!-- Show the user's full name from the id token here -->
+										<h6 class="d-inline-block nav-user-name user-name"></h6>
+									</span>
+								</li>
+								<li>
+									<i class="fas fa-user mr-3"></i>
+									<a href="/profile" class="route-link">Profile</a>
+								</li>
 
-              <li>
-                <i class="fas fa-power-off mr-3"></i>
-                <a href="#" id="qsLogoutBtn" onclick="logout()">Log out</a>
-              </li>
-            </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <div id="main-content" class="container mt-5 flex-grow-1">
-      <!-- Main Page -->
-      <div class="page" id="content-home" >
-        <main>
-          <!-- Main image section -->
-          <section class="main">
-            <div
-              id="carouselWithCaptions"
-              class="carousel slide carousel-fade"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="./img/head1.png"
-                    class="d-block w-100"
-                    alt="Two people are in a car"
-                  />
-                  <div class="carousel-caption d-md-block">
-                    <h1>Always your best option...</h1>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./img/head2.png"
-                    class="d-block w-100"
-                    alt="Car in a road"
-                  />
-                  <div class="carousel-caption d-md-block">
-                    <h1>... wherever you wanna go...</h1>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="./img/head3.png"
-                    class="d-block w-100"
-                    alt="A couple in the back of a car"
-                  />
-                  <div class="carousel-caption d-md-block">
-                    <h1>... we go with you!</h1>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselWithCaptions"
-                data-bs-slide="prev"
-              >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselWithCaptions"
-                data-bs-slide="next"
-              >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </section>
-        </main>
-    
-        <!-- Cards section -->
-        <section class="main-cards">
-          <div class="section-Title text-center">
-            <h5>WANTO DO YOU NEED?</h5>
-            <h2>OUR SERVICES</h2>
-          </div>
-    
-          <div class="containerCards">
-            <div class="card">
-              <img src="./img/girl_in_car.png" alt="Girl in a car photo" />
-              <div class="show-more">
-                <h2>
-                  Travel <br />
-                  economy
-                </h2>
-                <a href="#"> see more</a>
-              </div>
-            </div>
-    
-            <div class="card">
-              <img src="./img/family.png" alt="Family in a car photo" />
-              <div class="show-more">
-                <h2>
-                  Share with the <br />
-                  family
-                </h2>
-                <a href="#"> see more</a>
-              </div>
-            </div>
-    
-            <div class="card">
-              <img src="./img/car_with_bagged.png" alt="Car with bagged" />
-              <div class="show-more">
-                <h2>
-                  More lodge <br />
-                  space
-                </h2>
-                <a href="#"> see more</a>
-              </div>
-            </div>
-    
-            <div class="card">
-              <img src="./img/extrem_amarok.png" alt="Pickup photo" />
-              <div class="show-more">
-                <h2>
-                  Go <br />
-                  extreme
-                </h2>
-                <a href="#"> see more</a>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-        <section class="how-to-rent">
-          <div class="section-Title text-center">
-            <h5 id="scrollspyHowToRent">RENT IN JUST 3 STEPS</h5>
-            <h2>HOW TO RENT?</h2>
-          </div>
-          <div class="icon-containers row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-25 d-inline-block">
-                <img src="./img/person.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-25 d-inline-block">
-                <img src="./img/car.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a short card.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-25 d-inline-block">
-                <img
-                  src="./img/calendar.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a natural
-                    lead-in to additional content.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-        <!-- FAQ Section -->
-        <section class="questions text-center">
-          <div>
-            <h5 id="scrollspyFQA">WANTO TO KNOW MORE?</h5>
-            <h2>FREQUENTLY ASKED QUESTIONS</h2>
-          </div>
-          <br />
-          <div class="accordion" id="accordionPanelsStayOpen">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
-                  What are the requirements for renting a car?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingOne"
-              >
-                <div class="accordion-body">
-                  <p>
-                    You must be legally of age and must have a driver’s license
-                    according to the vehicle you want to rent.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseTwo"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseTwo"
-                >
-                  What are the payment methods?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseTwo"
-                class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingTwo"
-              >
-                <div class="accordion-body">
-                  <p>We accept cash, transfers and credit cards.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseThree"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseThree"
-                >
-                  What is included in the price?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseThree"
-                class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingThree"
-              >
-                <div class="accordion-body">
-                  <p>
-                    The price includes the use of the chosen vehicle for the time
-                    rented, also includes an accidents insurance which covers
-                    material damages of our vehicle. It does not include medical
-                    insurance or third-party damages.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingFour">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseFour"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseFour"
-                >
-                  What are the conditions for the fuel?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseFour"
-                class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingFour"
-              >
-                <div class="accordion-body">
-                  <p>
-                    We give the vehicle with a full tank. You can fill the tank
-                    before returning the vehicle or you can pay us the necessary
-                    amount to fill the tank when you return it.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingFive">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseFive"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseFive"
-                >
-                  Miles limits?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseFive"
-                class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingFive"
-              >
-                <div class="accordion-body">
-                  <p>
-                    We don't have any limit for miles to use, you can drive as far
-                    as you want inside the country.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingSix">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseSix"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseSix"
-                >
-                  What happens if I return the car later?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseSix"
-                class="accordion-collapse collapse show"
-                aria-labelledby="panelsStayOpen-headingSix"
-              >
-                <div class="accordion-body">
-                  <p>
-                    We have a tolerance of 30 minutes, after that time you will be
-                    charged for the fraction of the time that you were late
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-        <section class="form-container">
-          <div class="form">
-            <h5>GET IN TOUCH!</h5>
-            <h2>CONTACT FORM</h2>
-            <form action="https://formspree.io/f/mjvlavyo" method="POST">
-              <input type="text" name="Name" placeholder="Full Name" required />
-              <input type="email" name="Email" placeholder="Email" required />
-              <input
-                type="text"
-                name="Phone Number"
-                placeholder="Phone Number"
-                required
-              />
-              <select name="What car are you interested in?">
-                <option>Economic / Compact</option>
-                <option>Sedan / Family car</option>
-                <option>SUV</option>
-                <option>Pickup</option>
-              </select>
-              <!-- <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2022-12-31"> -->
-              <!-- <input type="date" id="start" name="trip-end" value="2022-07-22"  min="2022-01-01" max="2022-12-31"> -->
-              <label for="rental-start">Enter a date and time for your car rental:</label>
-              <input id="rental-start" name="rental-start" type="datetime-local" value="2022-4-11T08:30">
-              <label for="rental-end">Enter a date and time for return the car:</label>
-              <input id="rental-end" name="rental-end" placeholder="Enter a date and time for return the car:" type="datetime-local" value="2022-4-1T08:30">
-              <textarea name="Message" placeholder="Message" rows="4"></textarea>
-              <button class="form-button" type="submit">Send Message</button>
-            </form>
-          </div>
-        </section>
-      </div>
-      <!-- Profile Page -->
-      <div class="page" id="content-profile">
-        <div class="container">
-          <div class="row align-items-center profile-header">
-            <div class="col-md-2">
-              <img
-                alt="User's profile picture"
-                class="rounded-circle img-fluid profile-image mb-3 mb-md-0"
-              />
-            </div>
-            <div class="col-md">
-              <h2 class="user-name"></h2>
-              <p class="lead text-muted user-email"></p>
-            </div>
-          </div>
+								<li>
+									<i class="fas fa-power-off mr-3"></i>
+									<a href="#" id="qsLogoutBtn" onclick="logout()">Log out</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div id="main-content" class="container mt-5 flex-grow-1">
+			<!-- Main Page -->
+			<div class="page" id="content-home">
+				<main>
+					<!-- Main image section -->
+					<section class="main">
+						<div
+							id="carouselWithCaptions"
+							class="carousel slide carousel-fade"
+							data-bs-ride="carousel"
+						>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img
+										src="./img/head1.png"
+										class="d-block w-100"
+										alt="Two people are in a car"
+									/>
+									<div class="carousel-caption d-md-block">
+										<h1>Always your best option...</h1>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img
+										src="./img/head2.png"
+										class="d-block w-100"
+										alt="Car in a road"
+									/>
+									<div class="carousel-caption d-md-block">
+										<h1>... wherever you wanna go...</h1>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img
+										src="./img/head3.png"
+										class="d-block w-100"
+										alt="A couple in the back of a car"
+									/>
+									<div class="carousel-caption d-md-block">
+										<h1>... we go with you!</h1>
+									</div>
+								</div>
+							</div>
+							<button
+								class="carousel-control-prev"
+								type="button"
+								data-bs-target="#carouselWithCaptions"
+								data-bs-slide="prev"
+							>
+								<span
+									class="carousel-control-prev-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button
+								class="carousel-control-next"
+								type="button"
+								data-bs-target="#carouselWithCaptions"
+								data-bs-slide="next"
+							>
+								<span
+									class="carousel-control-next-icon"
+									aria-hidden="true"
+								></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</section>
+				</main>
 
-          <div class="row">
-            <pre class="rounded">
+				<!-- Cards section -->
+				<section class="main-cards">
+					<div class="section-Title text-center">
+						<h5>WANTO DO YOU NEED?</h5>
+						<h2>OUR SERVICES</h2>
+					</div>
+
+					<div class="containerCards">
+						<div class="card">
+							<img src="./img/girl_in_car.png" alt="Girl in a car photo" />
+							<div class="show-more">
+								<h2>
+									Travel <br />
+									economy
+								</h2>
+								<a href="#"> see more</a>
+							</div>
+						</div>
+
+						<div class="card">
+							<img src="./img/family.png" alt="Family in a car photo" />
+							<div class="show-more">
+								<h2>
+									Share with the <br />
+									family
+								</h2>
+								<a href="#"> see more</a>
+							</div>
+						</div>
+
+						<div class="card">
+							<img src="./img/car_with_bagged.png" alt="Car with bagged" />
+							<div class="show-more">
+								<h2>
+									More lodge <br />
+									space
+								</h2>
+								<a href="#"> see more</a>
+							</div>
+						</div>
+
+						<div class="card">
+							<img src="./img/extrem_amarok.png" alt="Pickup photo" />
+							<div class="show-more">
+								<h2>
+									Go <br />
+									extreme
+								</h2>
+								<a href="#"> see more</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="how-to-rent">
+					<div class="section-Title text-center">
+						<h5 id="scrollspyHowToRent">RENT IN JUST 3 STEPS</h5>
+						<h2>HOW TO RENT?</h2>
+					</div>
+					<div class="icon-containers row row-cols-1 row-cols-md-3 g-4">
+						<div class="col">
+							<div class="card h-25 d-inline-block">
+								<img src="./img/person.jpg" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">
+										This is a longer card with supporting text below as a
+										natural lead-in to additional content. This content is a
+										little bit longer.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25 d-inline-block">
+								<img src="./img/car.jpg" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">This is a short card.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card h-25 d-inline-block">
+								<img src="./img/calendar.jpg" class="card-img-top" alt="..." />
+								<div class="card-body">
+									<h5 class="card-title">Card title</h5>
+									<p class="card-text">
+										This is a longer card with supporting text below as a
+										natural lead-in to additional content.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- FAQ Section -->
+				<section class="questions text-center">
+					<div>
+						<h5 id="scrollspyFQA">WANTO TO KNOW MORE?</h5>
+						<h2>FREQUENTLY ASKED QUESTIONS</h2>
+					</div>
+					<br />
+					<div class="accordion" id="accordionPanelsStayOpen">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseOne"
+									aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseOne"
+								>
+									What are the requirements for renting a car?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseOne"
+								class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingOne"
+							>
+								<div class="accordion-body">
+									<p>
+										You must be legally of age and must have a driver’s license
+										according to the vehicle you want to rent.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseTwo"
+									aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseTwo"
+								>
+									What are the payment methods?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseTwo"
+								class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingTwo"
+							>
+								<div class="accordion-body">
+									<p>We accept cash, transfers and credit cards.</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseThree"
+									aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseThree"
+								>
+									What is included in the price?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseThree"
+								class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingThree"
+							>
+								<div class="accordion-body">
+									<p>
+										The price includes the use of the chosen vehicle for the
+										time rented, also includes an accidents insurance which
+										covers material damages of our vehicle. It does not include
+										medical insurance or third-party damages.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingFour">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseFour"
+									aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseFour"
+								>
+									What are the conditions for the fuel?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseFour"
+								class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingFour"
+							>
+								<div class="accordion-body">
+									<p>
+										We give the vehicle with a full tank. You can fill the tank
+										before returning the vehicle or you can pay us the necessary
+										amount to fill the tank when you return it.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingFive">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseFive"
+									aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseFive"
+								>
+									Miles limits?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseFive"
+								class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingFive"
+							>
+								<div class="accordion-body">
+									<p>
+										We don't have any limit for miles to use, you can drive as
+										far as you want inside the country.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingSix">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseSix"
+									aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseSix"
+								>
+									What happens if I return the car later?
+								</button>
+							</h2>
+							<div
+								id="panelsStayOpen-collapseSix"
+								class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingSix"
+							>
+								<div class="accordion-body">
+									<p>
+										We have a tolerance of 30 minutes, after that time you will
+										be charged for the fraction of the time that you were late
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="form-container">
+					<div class="form">
+						<h5>GET IN TOUCH!</h5>
+						<h2>CONTACT FORM</h2>
+						<form action="https://formspree.io/f/mjvlavyo" method="POST">
+							<input type="text" name="Name" placeholder="Full Name" required />
+							<input type="email" name="Email" placeholder="Email" required />
+							<input
+								type="text"
+								name="Phone Number"
+								placeholder="Phone Number"
+								required
+							/>
+							<select name="What car are you interested in?">
+								<option>Economic / Compact</option>
+								<option>Sedan / Family car</option>
+								<option>SUV</option>
+								<option>Pickup</option>
+							</select>
+							<!-- <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2022-12-31"> -->
+							<!-- <input type="date" id="start" name="trip-end" value="2022-07-22"  min="2022-01-01" max="2022-12-31"> -->
+							<label for="rental-start"
+								>Enter a date and time for your car rental:</label
+							>
+							<input
+								id="rental-start"
+								name="rental-start"
+								type="datetime-local"
+								value="2022-4-11T08:30"
+							/>
+							<label for="rental-end"
+								>Enter a date and time for return the car:</label
+							>
+							<input
+								id="rental-end"
+								name="rental-end"
+								placeholder="Enter a date and time for return the car:"
+								type="datetime-local"
+								value="2022-4-1T08:30"
+							/>
+							<textarea
+								name="Message"
+								placeholder="Message"
+								rows="4"
+							></textarea>
+							<button class="form-button" type="submit">Send Message</button>
+						</form>
+					</div>
+				</section>
+			</div>
+			<!-- Profile Page -->
+			<div class="page" id="content-profile">
+				<div class="container">
+					<div class="row align-items-center profile-header">
+						<div class="col-md-2">
+							<img
+								alt="User's profile picture"
+								class="rounded-circle img-fluid profile-image mb-3 mb-md-0"
+							/>
+						</div>
+						<div class="col-md">
+							<h2 class="user-name"></h2>
+							<p class="lead text-muted user-email"></p>
+						</div>
+					</div>
+
+					<div class="row">
+						<pre class="rounded">
               <code id="profile-data" class="json"></code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="footer-basic">
-      <div class="social">
-        <a href="#"><i class="icon ion-social-instagram"></i></a>
-        <a href="#"><i class="icon ion-social-twitter"></i></a>
-        <a href="#"><i class="icon ion-social-facebook"></i></a>
-      </div>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Home</a></li>
-        <li class="list-inline-item"><a href="#">Cars</a></li>
-        <li class="list-inline-item"><a href="#">How to rent</a></li>
-        <li class="list-inline-item"><a href="#">F.A.Q</a></li>
-        <li class="list-inline-item"><a href="#">Rent your car</a></li>
-        <li class="list-inline-item"><a href="#">Contact us</a></li>
-      </ul>
-      <p class="copyright">RENTAL CARS © 2022</p>
-    </footer>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer-basic">
+			<div class="social">
+				<a href="#"><i class="icon ion-social-instagram"></i></a>
+				<a href="#"><i class="icon ion-social-twitter"></i></a>
+				<a href="#"><i class="icon ion-social-facebook"></i></a>
+			</div>
+			<ul class="list-inline">
+				<li class="list-inline-item"><a href="#">Home</a></li>
+				<li class="list-inline-item"><a href="#">Cars</a></li>
+				<li class="list-inline-item"><a href="#">How to rent</a></li>
+				<li class="list-inline-item"><a href="#">F.A.Q</a></li>
+				<li class="list-inline-item"><a href="#">Rent your car</a></li>
+				<li class="list-inline-item"><a href="#">Contact us</a></li>
+			</ul>
+			<p class="copyright">RENTAL CARS © 2022</p>
+		</footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+		<script src="js/ui.js"></script>
+		<script src="js/app.js"></script>
+	</body>
 </html>
