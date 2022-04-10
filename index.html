@@ -50,10 +50,10 @@
                 <a class="nav-link" href="#scrollspyFQA">F.A.Q</a>
               </li>
               <li class="nav-item ms-5">
-                <a class="nav-link" href="#">Rent your car</a>
+                <a class="nav-link" href="rentYourCar.html">Rent your car</a>
               </li>
               <li class="nav-item ms-5">
-                <a class="nav-link" href="#">Contact us</a>
+                <a class="nav-link" href="contactUs.html">Contact Us</a>us</a>
               </li>
             </ul>
             <div class="d-flex">
@@ -418,6 +418,12 @@
             <option>SUV</option>
             <option>Pickup</option>
           </select>
+          <!-- <input type="date" id="start" name="trip-start" value="2022-07-22" min="2022-01-01" max="2022-12-31"> -->
+          <!-- <input type="date" id="start" name="trip-end" value="2022-07-22"  min="2022-01-01" max="2022-12-31"> -->
+          <label for="rental-start">Enter a date and time for your car rental:</label>
+          <input id="rental-start" name="rental-start" type="datetime-local" value="2022-4-11T08:30">
+          <label for="rental-end">Enter a date and time for return the car:</label>
+          <input id="rental-end" name="rental-end" placeholder="Enter a date and time for return the car:" type="datetime-local" value="2022-4-1T08:30">
           <textarea name="Message" placeholder="Message" rows="4"></textarea>
           <button class="form-button" type="submit">Send Message</button>
         </form>
