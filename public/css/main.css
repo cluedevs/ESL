@@ -1,13 +1,24 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Roboto',
+  sans-serif;
+}
+
 .hidden {
   display: none;
 }
+
 label {
   margin-bottom: 10px;
   display: block;
 }
 
 .navbar {
-  min-height: 115px;
+  min-height: 90px;
+  font-size: 1.1rem;
+
 }
 
 .btn-login {
@@ -18,10 +29,6 @@ label {
   margin-right: 5rem;
 }
 
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
 
 nav.nav-color {
   background-color: #060606 !important;
@@ -31,7 +38,21 @@ header{
 }
 
 main {
-  margin-top: 0;
+  margin: 0;
+}
+
+.icon-card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  align-content: flex-start;
+}
+
+
+.card-img-top {
+  max-width: 30%;
+  object-fit: cover
 }
 
 .carousel-caption {
@@ -40,13 +61,10 @@ main {
   align-content: center;
 }
 
-
-
 .main-cards {
-
   justify-content: center;
   align-items: center;
-  margin: 1rem
+  margin: 3rem;
 }
 
 .section-Title {
@@ -63,17 +81,25 @@ main {
   margin-bottom: 2rem;
 }
 
+/* solved bug with max width */
+#main-content{
+  width: 100%;
+
+
+}
+/* end solved bug */
+
 .card {
   margin-top: 2rem;
   margin-bottom: 3rem;
-  width: 245px;
+  width: 240px;
   height: 245px;
   border: none !important;
 }
 
 /* modify here for change img size */
 .card img {
-  width: 15 rem;
+  width: 15rem;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -105,7 +131,6 @@ main {
   text-decoration: none;
   padding: 0.4rem;
   border-radius: 7px;
-
 }
 
 h5 {
@@ -116,13 +141,15 @@ h5 {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 3.5rem;
 }
 
 .icon-containers {
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
 
 }
 
@@ -134,39 +161,139 @@ h5 {
 
 .questions {
   padding: 40px;
+  text-align: left;
 }
-
-.form-container{
-  /* background-color: black; */
+/* rent you car section */
+.business{
   display: flex;
-  flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
-  width: 24rem;
-  gap: 1rem;
+  margin: 2rem 4rem;
+  max-width: 100%;
 }
 
-input,
-select,
-textarea{
-  padding: 1.4rem;
-  background: transparent;
-  border: 1px solid black;
-  border-radius: 15px;
+
+/* contact section  */
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
 }
 
-textarea{
-  height: 6rem;
+.contact-info {
+  max-width: 380px;
+  line-height: 65px;
+  padding-left: 50px;
+  font-size: 15px;
+  margin-right: 30px;
+  margin-top: 5rem;
 }
 
-.form-button{
-  width: 8rem;
-  padding: 1.4 rem;
-  background-color: #4b4c4d;
-  color: white;
-  border-radius: 15px;
+.contact-info i {
+  margin-right: 10px;
+  font-size: 25px;
+
+
 }
 
+.contact-form {
+  max-width: 650px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+
+}
+
+.contact-form .text-box {
+  border: none;
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.contact-form .text-box:first-child {
+  margin-right: 10px;
+}
+
+
+.contact-form textarea {
+  border: none;
+  width: 100%;
+  padding: 12px;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.form-button {
+  float: right;
+  background-color: #f3a735;
+  border: none;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #ec9407;
+}
+
+@media screen and (max-width:950px) {
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    margin: 30px 50px;
+  }
+
+  .contact-form h2 {
+    font-size: 30px;
+  }
+
+  .contact-form .text-box {
+    width: 100%;
+  }
+
+  .contact-info {
+    font-size: 12px;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 2rem;
+  }
+}
+/* End of contact form */
+
+/* footer section */
 .footer-basic {
   padding: 40px 0;
   background-color: #ffffff;
