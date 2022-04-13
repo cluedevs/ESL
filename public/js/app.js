@@ -73,6 +73,8 @@ const requireAuth = async (fn, targetUrl) => {
 const loadPages = async () => {
   let home = await fetch("view/home.html");
   document.getElementById("content-home").innerHTML = await home.text();
+  let cars = await fetch("view/cars.html");
+  document.getElementById("content-cars").innerHTML = await cars.text();
   let profile = await fetch("view/profile.html");
   document.getElementById("content-profile").innerHTML = await profile.text();
   let rentYourCar = await fetch("view/rentYourCar.html");

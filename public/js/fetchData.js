@@ -1,4 +1,5 @@
-fetch('data/cars.json')
+function loadCarsData() {
+  fetch('data/cars.json')
   .then(res => {
     return res.json();
   })
@@ -76,3 +77,4 @@ fetch('data/cars.json')
     console.log(err)
     return err;
   });
+}
