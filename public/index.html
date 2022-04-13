@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/cars.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -22,6 +23,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 		<title>Rental Car</title>
 	</head>
 
@@ -49,7 +51,7 @@
 								>
 							</li>
 							<li class="nav-item ms-5">
-								<a class="nav-link" href="#">Cars</a>
+								<a class="route-link" href="/cars">Cars</a>
 							</li>
 							<li class="nav-item ms-5">
 								<a class="nav-link" href="#scrollspyHowToRent">How to rent?</a>
@@ -164,6 +166,8 @@
 			<div class="page" id="content-home"></div>
 			<!-- Profile Page -->
 			<div class="page" id="content-profile"></div>
+			<!-- Cars Page -->
+			<div class="page" id="content-cars"></div>
 			<!-- Rent Car Page -->
 			<div class="page" id="content-rent-car"></div>
 			<!-- Reservations Page -->
@@ -208,7 +212,10 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 		<script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<script src="js/ui.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/fetchData.js"></script>
+		<script type="module" src="js/cars.js"></script>
 	</body>
 </html>
