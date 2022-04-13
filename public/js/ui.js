@@ -3,7 +3,10 @@ const router = {
   "/": () => showContent("content-home"),
   "/profile": () =>
     requireAuth(() => showContent("content-profile"), "/profile"),
-  "/login": () => login()
+  "/rent": () => requireAuth(() => showContent("content-rent-car"), "/rent"),
+  "/reservations": () =>
+    requireAuth(() => showContent("content-reservations"), "/reservations"),
+  "/login": () => login(),
 };
 
 //Declare helper functions
@@ -63,15 +66,11 @@ const updateUI = async () => {
     if (isAuthenticated) {
       const user = await auth0.getUser();
 
-
-
       // document.getElementById("profile-data").innerText = JSON.stringify(
       //   user,
       //   null,
       //   2
       // );
-
-
 
       document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
 

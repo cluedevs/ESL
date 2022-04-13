@@ -9,7 +9,7 @@ const login = async (targetUrl) => {
     console.log("Logging in", targetUrl);
 
     const options = {
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
     };
 
     if (targetUrl) {
@@ -29,7 +29,7 @@ const logout = () => {
   try {
     console.log("Logging out");
     auth0.logout({
-      returnTo: window.location.origin
+      returnTo: window.location.origin,
     });
   } catch (err) {
     console.log("Log out failed", err);
@@ -50,7 +50,8 @@ const configureClient = async () => {
 
   auth0 = await createAuth0Client({
     domain: config.domain,
-    client_id: config.clientId
+    client_id: config.clientId,
+    audience: config.audience,
   });
 };
 
@@ -69,8 +70,22 @@ const requireAuth = async (fn, targetUrl) => {
   return login(targetUrl);
 };
 
+const loadPages = async () => {
+  let home = await fetch("view/home.html");
+  document.getElementById("content-home").innerHTML = await home.text();
+  let profile = await fetch("view/profile.html");
+  document.getElementById("content-profile").innerHTML = await profile.text();
+  let rentYourCar = await fetch("view/rentYourCar.html");
+  document.getElementById("content-rent-car").innerHTML =
+    await rentYourCar.text();
+  let reservations = await fetch("view/reservations.html");
+  document.getElementById("content-reservations").innerHTML =
+    await reservations.text();
+};
+
 // Will run when page finishes loading
 window.onload = async () => {
+  await loadPages();
   await configureClient();
 
   // If unable to parse the history hash, default to the root URL
@@ -127,3 +142,28 @@ window.onload = async () => {
   updateUI();
 };
 
+const callApi = async () => {
+  try {
+    // Get the access token from the Auth0 client
+    const token = await auth0.getTokenSilently();
+
+    // Make the call to the API, setting the token
+    // in the Authorization header
+    const response = await fetch("/api/external", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    // Fetch the JSON result
+    const responseData = await response.json();
+
+    // Display the result in the output element
+    const responseElement = document.getElementById("api-call-result");
+
+    responseElement.innerText = JSON.stringify(responseData, {}, 2);
+  } catch (e) {
+    // Display errors in the console
+    console.error(e);
+  }
+};
