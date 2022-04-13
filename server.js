@@ -12,13 +12,27 @@ app.get("/auth_config.json", (req, res) => {
   res.sendFile(join(__dirname, "auth_config.json"));
 });
 
+app.get("view/home.html", (req, res) => {
+  res.sendFile(join(__dirname, "view/home.html"));
+});
+
+app.get("view/profile.html", (req, res) => {
+  res.sendFile(join(__dirname, "view/profile.html"));
+});
+
+app.get("view/rentYourCar.html", (req, res) => {
+  res.sendFile(join(__dirname, "view/rentYourCar.html"));
+});
+
+app.get("view/reservations.html", (req, res) => {
+  res.sendFile(join(__dirname, "view/reservations.html"));
+});
+
 app.get("/*", (_, res) => {
   res.sendFile(join(__dirname, "index.html"));
 });
 
-
-
-process.on("SIGINT", function() {
+process.on("SIGINT", function () {
   process.exit();
 });
 
