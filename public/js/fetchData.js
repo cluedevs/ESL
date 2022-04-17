@@ -4,26 +4,33 @@ function loadCarsData() {
     return res.json();
   })
   .then(data => {
-    console.log(data);
 
     data.forEach(function (current){
         let badge = document.createElement('div');
         badge.innerHTML = `
         <div class="car-wrapper">
-        <div>
-          <h3 class="title"> ${current.brand} ${current.model} </h3>
-          <div class="swiper">
-          <div class="swiper-wrapper">
-          <div class="swiper-slide" id="swiper">
-              <img src="${current.pics[0]}" width="200" height="200" alt="${current.brand}"/>
-              </div>
-              <div class="swiper-slide"><img src="${current.pics[1]}" width="200" height="200" alt="${current.brand}"/></div>
-              <div class="swiper-slide"><img src="${current.pics[2]}" width="200" height="200" alt="${current.brand}"/></div>
-              </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+        <div class="slider-wrapper">
+          <h3 class="title-cars"> ${current.brand} ${current.model} </h3>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block swiper" src="${current.pics[0]}" alt="${current.brand}">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block swiper" src="${current.pics[1]}" alt="${current.brand}">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block swiper" src="${current.pics[2]}" alt="${current.brand}">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
         </div>
-        <div class="options-only-phone">${current.priceDay}</div>
+        <div class="options-price">$${current.priceDay} COP/day</div>
         </div>
           <div class="details">
           <h3>Details</h3>
@@ -43,27 +50,29 @@ function loadCarsData() {
           <div class="rate-details">
           <h3>Rate Details</h3>
           <ul>
-          <li>
-          Unlimited Mileage
-          </li>
-          <li>
-          Vehicle Assistance Service (mechanical defect)
-          </li>
-          <li>
-          All Local Taxes and Fees
-          </li>
-          <li>
-            One Additional Driver
-          </li>
-          <li>
-          Third Party Liability Insurance $1Million , With No Deductible- (EP/LIS/TPL)
-          </li>
-          <li>
-          Full Coverage of Rental Vehicle, With No Deductible: Accident & Theft (CDW/LDW)
-          </li>
-          <li>
-          No Cancellation Fee</ul>
-          </li>
+            <li>
+            Unlimited Mileage
+            </li>
+            <li>
+            Vehicle Assistance Service (mechanical defect)
+            </li>
+            <li>
+            All Local Taxes and Fees
+            </li>
+            <li>
+              One Additional Driver
+            </li>
+            <li>
+            Third Party Liability Insurance $1Million , With No Deductible- (EP/LIS/TPL)
+            </li>
+            <li>
+            Full Coverage of Rental Vehicle, With No Deductible: Accident & Theft (CDW/LDW)
+            </li>
+            <li>
+            No Cancellation Fee</ul>
+            </li>
+          </ul>
+          <button onclick="login()" class="reservation-cta">Reserve now!</button>
           </div>
           </div>
           `;

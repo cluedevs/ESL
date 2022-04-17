@@ -3,22 +3,57 @@
   .swiper {
     width: 200px;
     height: 200px;
+    border-radius: 0.2rem;
+    border: 1px solid #c4c4c4;
   }
   
-  .title {
+  .title-cars {
     color: #000;
+    max-width: 250px;
+    text-align: center;
   }
   
   .car-wrapper {
     margin: 2rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    box-shadow: 15px 10px 40px 40px #0000000D;
+    align-items: flex-start;
+    box-shadow: 10px 15px 20px 15px #3333330d;
     border-radius: 10px;
   }
+  .details{
+    padding: 0 1rem;
+  }
   
-  
+  .options-price {
+    text-align: center;
+    padding-top: 0.2rem;
+  }
+
+  .slider-wrapper{
+    max-width: 200px;
+  }
+
+  .rate-details ul {
+    padding-left: 1rem;
+  }
+
+  .reservation-cta {
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #ffa620;
+    color: #fff;
+    border-right: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    font-weight: 600;
+  }
+
+  .reservation-cta:hover {
+    background-color: #f89b10;
+  }
+
   @media (max-width: 768px) {
     .car-wrapper {
       flex-direction: column;
@@ -27,4 +62,7 @@
     .rate-details {
       max-width: 250px;
     }
+    .details{
+      padding: 1rem;
+    } 
   } 
