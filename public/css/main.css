@@ -36,48 +36,58 @@ label {
 }
 
 .route-link:hover {
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(239, 150, 6, 0.8);
+	transform: scale(1.1);
 }
 
+.nav-link:hover {
+	color: rgba(239, 150, 6, 0.8) !important;
+	transform: scale(1.1);
+}
+
+/* navbar */
 .navbar {
 	min-height: 90px;
 	font-size: 1.1rem;
 }
 
+.navbar-brand {
+	margin-left: 1rem;
+}
+
 .btn-login {
 	margin-right: 5rem;
+
 }
 
 .li-login {
-	margin-right: 5rem;
+	margin-right: 9rem;
 }
 
 nav.nav-color {
 	background-color: #060606 !important;
 }
+
 header {
 	margin-bottom: 0;
 }
 
+/* Main/carrousel content section */
+
 main {
 	margin: 0;
+	padding: 0;
+}
+
+.main img {
+	max-height: 550px;
+	min-height: 230px;
 }
 
 .main {
 	margin: 0;
-}
-
-.icon-card {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	text-align: center;
-	align-content: flex-start;
-}
-
-.card-img-top {
-	max-width: 30%;
-	object-fit: cover;
+	padding: 0;
+	transition: 3ms;
 }
 
 .carousel-caption {
@@ -86,103 +96,164 @@ main {
 	align-content: center;
 }
 
-.main-cards {
-	justify-content: center;
-	align-items: center;
-	margin: 3rem;
-}
-
+/* All section titles */
 .section-Title {
 	display: block;
 	width: 100%;
 	justify-content: center;
 }
 
-.containerCards {
-	width: 100%;
+/* Main cars section */
+.main-cards {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-evenly;
-	margin-bottom: 2rem;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3rem;
 }
 
-/* solved bug with max width */
-#main-content {
+
+.cards-wrapper {
+	display: flex;
+	flex-flow: row wrap;
 	width: 100%;
+	justify-content: center;
 }
-/* end solved bug */
 
 .card {
+	width: 300px;
+	height: 360px;
+	padding: 2rem 1rem;
 	margin-top: 2rem;
-	margin-bottom: 3rem;
-	width: 240px;
-	height: 245px;
-	border: none !important;
-}
-
-/* modify here for change img size */
-.card img {
-	width: 15rem;
-	object-fit: cover;
-	border-radius: 15px;
-}
-
-.show-more {
+	margin-bottom: 2rem;
 	position: relative;
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: left;
-	align-items: flex-start;
-	bottom: 7rem;
-	left: 1rem;
-	z-index: 1;
+	align-items: center;
+	box-shadow: 0px 7px 7px rgba(188, 183, 183, 0.5);
+	transform: 0.5s ease-in-out;
+
 }
 
-.show-more h2 {
-	font-size: 1.6rem;
-	color: #ffffff;
-	line-height: 0.8;
-	font-weight: 300;
+.card:hover {
+	transform: translateY(20px);
 }
 
-.show-more a {
-	margin-top: 1rem;
-	color: #fff614;
-	background-color: #0c0c0c;
+.card:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(244, 164, 4, 0.082), rgba(40, 39, 39, 0.97));
+	z-index: 2;
+	transition: 0.5s all;
+	opacity: 0;
+}
+
+.card:hover:before {
+	opacity: 1;
+
+}
+
+.card img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+.card .info {
+	position: relative;
+	z-index: 3;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s all;
+
+}
+
+.card:hover .info {
+	opacity: 1;
+	transform: translateY(0px);
+	margin-top: 5rem;
+}
+
+.card .info h1 {
+	margin: 0;
+
+}
+
+.card .info p {
+	letter-spacing: 1px;
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 20px;
+}
+
+.card .info .btn {
 	text-decoration: none;
-	padding: 0.4rem;
-	border-radius: 7px;
+	padding: 0.5rem 1rem;
+	background: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
 }
+
+.card .info .btn {
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+
 
 h5 {
 	color: #f3a735;
 }
 
-.how-to-rent {
+
+/* How to rent section */
+
+.rent-steps {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-	margin-top: 3.5rem;
-}
-
-.icon-containers {
 	justify-content: center;
 	align-items: center;
-	padding: 1.5rem;
+	margin-top: 2rem;
 }
 
-.icon img {
-	width: 160px;
-	height: 160px;
+.icon-cards-container {
+	justify-content: center;
+	align-items: center;
+	padding-top: 2rem;
+
 }
 
+.card-img-top {
+	max-width: 25%;
+	object-fit: cover;
+}
+
+.icon-card {
+	margin: 0;
+	padding: 0;
+	max-width: 220px;
+}
+
+
+/* FAQ section */
 .questions {
-	padding: 40px;
+	margin-top: 2rem;
+	padding: 5px 40px;
 	text-align: left;
+
 }
+
 /* rent you car section */
 .business {
 	display: flex;
@@ -193,7 +264,7 @@ h5 {
 	max-width: 100%;
 }
 
-/* contact section  */
+/* Reservation contact section  */
 .contact-section {
 	width: 100%;
 	display: flex;
@@ -272,17 +343,21 @@ h5 {
 	font-size: 15px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	border-radius: 5px;
+	border-radius: 50px;
 	cursor: pointer;
+	color: #fff;
 }
 
 .form-button:hover {
 	background-color: #ec9407;
+
+
 }
 
 @media screen and (max-width: 950px) {
 	.contact-section {
 		flex-direction: column;
+		align-items: center;
 	}
 
 	.contact-info,
@@ -305,7 +380,55 @@ h5 {
 		margin-top: 2rem;
 	}
 }
-/* End of contact form */
+
+/* profile section */
+.profile-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.profile-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	margin: 4rem auto;
+	width: 400px;
+	height: 400px;
+	box-shadow: 0 7px 10px 0 rgba(231, 228, 220, 0.83);
+	border-radius: 25px;
+	background-color:rgb(255, 255, 255);
+}
+.img-profile{
+	margin-top:1.6rem;
+	margin-bottom: 2rem;
+
+}
+.img-profile img {
+	width:130px;
+  object-fit:cover;
+}
+
+.sub-header-profile{
+ margin: 0.5rem 0.6rem;
+}
+.nameUser h2{
+ font-size:1.4rem;
+}
+.emailUser p{
+	text-align:center;
+	font-size:1rem;
+
+}
+
+.user-nickname{
+	text-transform: uppercase;
+	text-align:center;
+	font-size:1rem;
+}
+
 
 /* footer section */
 .footer-basic {
@@ -342,7 +465,7 @@ h5 {
 	padding-bottom: 25px;
 }
 
-.footer-basic .social > a {
+.footer-basic .social>a {
 	font-size: 24px;
 	width: 40px;
 	height: 40px;
@@ -356,7 +479,7 @@ h5 {
 	opacity: 0.75;
 }
 
-.footer-basic .social > a:hover {
+.footer-basic .social>a:hover {
 	opacity: 0.9;
 }
 

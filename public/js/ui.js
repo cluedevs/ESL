@@ -70,6 +70,7 @@ const updateUI = async () => {
     if (isAuthenticated) {
       const user = await auth0.getUser();
 
+      console.log();
       // document.getElementById("profile-data").innerText = JSON.stringify(
       //   user,
       //   null,
@@ -81,6 +82,7 @@ const updateUI = async () => {
       eachElement(".profile-image", (e) => (e.src = user.picture));
       eachElement(".user-name", (e) => (e.innerText = user.name));
       eachElement(".user-email", (e) => (e.innerText = user.email));
+      eachElement(".user-nickname", (e) => (e.innerText = `Codigo de Descuento: 15OFF${user.nickname}`));
       eachElement(".auth-invisible", (e) => e.classList.add("hidden"));
       eachElement(".auth-visible", (e) => e.classList.remove("hidden"));
     } else {
