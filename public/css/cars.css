@@ -59,13 +59,11 @@
   transform: scale(1.1)
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+  #carouselControl{
   background-color: rgba(9, 9, 9, 0.531);
   border-radius: 50px;
   margin: 10px;
   padding: 10px;
-
 }
 
 

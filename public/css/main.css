@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
+	outline: none;
 }
 
 .hidden {
@@ -55,8 +56,10 @@ label {
 	margin-left: 1rem;
 }
 
-.btn-login {
+#qsLoginBtn {
 	margin-right: 5rem;
+	color: rgba(255, 255, 255, 0.55);
+	background-color: transparent !important;
 
 }
 
@@ -66,13 +69,12 @@ label {
 
 nav.nav-color {
 	background-color: #060606 !important;
+	outline: none !important;
 }
 
 .dropdown-item{
 	color: rgb(240, 237, 237) !important;
 }
-
-
 
 header {
 	margin-bottom: 0;
@@ -86,6 +88,7 @@ header {
 
 .dropdown-item:hover {
 	color: #ec9407 !important;
+	background-color: #060606;
 }
 
 /* Main/carrousel content section */
@@ -101,17 +104,14 @@ main {
 	object-fit: cover;
 }
 
-.main {
-	margin: 0;
-	padding: 0;
-	transition: 3ms;
-}
 
 .carousel-caption {
 	display: flex;
 	justify-content: center;
 	align-content: center;
 }
+
+
 
 /* All section titles */
 .section-Title {
@@ -151,9 +151,6 @@ main {
 
 }
 
-.card:hover {
-	transform: translateY(20px);
-}
 
 .card:before {
 	content: "";
