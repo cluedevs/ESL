@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/css/main.css" />
 	<link rel="stylesheet" href="/css/cars.css" />
+	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
@@ -32,8 +33,17 @@
 						<li class="nav-item ms-5">
 							<a class="nav-link" aria-current="page" href="./index.html">Home</a>
 						</li>
-						<li class="nav-item ms-5">
-							<a class="route-link" href="/cars">Cars</a>
+						<li class="nav-item  ms-5 dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								Cars
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item nav-link route-link" href="/compact">Compact</a></li>
+								<li><a class="dropdown-item nav-link route-link" href="/sedan">Sedan</a></li>
+								<li><a class="dropdown-item nav-link route-link" href="/suv">SUV</a></li>
+								<li><a class="dropdown-item nav-link route-link" href="/pickup">Pickup</a>
+							</ul>
 						</li>
 						<li class="nav-item ms-5">
 							<a class="route-link" href="/rent">Rent your car</a>
@@ -47,7 +57,7 @@
 							<!-- Login button: show if NOT authenticated -->
 							<li class="nav-item auth-invisible">
 								<button id="qsLoginBtn" onclick="login()"
-									class="btn btn-primary btn-margin auth-invisible hidden btn-login">
+									class="btn btn-margin auth-invisible hidden btn-login">
 									Log in
 								</button>
 							</li>
@@ -98,7 +108,7 @@
 
 							<li>
 								<i class="fas fa-power-off mr-3"></i>
-								<a href="#" id="qsLogoutBtn" onclick="logout()">Log out</a>
+								<a class="btn-out" href="#" id="qsLogoutBtn" onclick="logout()">Log out</a>
 							</li>
 						</ul>
 					</div>
@@ -112,8 +122,11 @@
 		<div class="page" id="content-home"></div>
 		<!-- Profile Page -->
 		<div class="page" id="content-profile"></div>
-		<!-- Cars Page -->
-		<div class="page" id="content-cars"></div>
+		<!-- Cars Pages -->
+		<div class="page" id="content-compact"></div>
+		<div class="page" id="content-sedan"></div>
+		<div class="page" id="content-suv"></div>
+		<div class="page" id="content-pickup"></div>
 		<!-- Rent Car Page -->
 		<div class="page" id="content-rent-car"></div>
 		<!-- Reservations Page -->
@@ -131,7 +144,7 @@
 				<a class="route-link" href="/">Home</a>
 			</li>
 			<li class="list-inline-item">
-				<a class="route-link" href="/cars">Cars</a>
+				<a class="route-link" href="#navbarDropdownMenuLink">Cars</a>
 			</li>
 			<li class="list-inline-item">
 				<a class="route-link" href="/rent">Rent your car</a>
@@ -157,8 +170,12 @@
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/ui.js"></script>
 	<script src="js/app.js"></script>
-	<script src="./js/fetchData.js"></script>
+	<script src="./js/fetchCompact.js"></script>
+	<script src="./js/fetchSedan.js"></script>
+	<script src="./js/fetchSuv.js"></script>
+	<script src="./js/fetchPickup.js"></script>
 	<script type="module" src="./js/cars.js"></script>
+
 </body>
 
 </html>

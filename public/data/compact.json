@@ -1,0 +1,50 @@
+[
+    {
+        "carId": "1111",
+        "category": "COMPACT",
+        "brand": "Volkswagen",
+        "model": "Gol",
+        "color": "Grey",
+        "priceDay": "18",
+        "license": "BIG-189",
+        "passengers": "5",
+        "baggages": "2",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1IZ_Xgp1EXJGVLviSn5stGUiK6Pus7xtl",
+            "https://drive.google.com/uc?export=view&id=121NWfTiQgUGJvG4rxtDdfK4kd3ofU1ed",
+            "https://drive.google.com/uc?export=view&id=1wMlsgzw_Ynd4Nz--XNKGLakBmSe5-4G-"
+        ]
+    },
+    {
+        "carId": "1112",
+        "category": "COMPACT",
+        "brand": "Ford",
+        "model": "KA",
+        "color": "BLACK",
+        "priceDay": "20",
+        "license": "XCX-804",
+        "passengers": "5",
+        "baggages": "3",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1PGvVGbzJu_TeYCs1LFnnNOcci2mVfPFE",
+            "https://drive.google.com/uc?export=view&id=19tU9UKzbhdm5zUf4GQsKYXkJEfu9haSw",
+            "https://drive.google.com/uc?export=view&id=1LI3By0WOywVclEZgjAsPIJPM5i6EnZPM"
+        ]
+    },
+    {
+        "carId": "1113",
+        "category": "COMPACT",
+        "brand": "Chevrolet",
+        "model": "ONIX",
+        "color": "White",
+        "priceDay": "20",
+        "license": "TRE-564",
+        "passengers": "5",
+        "baggages": "3",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1CuP1uWFfair9fCSaSjN87Ke8F4qxmmgQ",
+            "https://drive.google.com/uc?export=view&id=1UYr89UTCHvezIZloZjk_iXqfMpITeotm",
+            "https://drive.google.com/uc?export=view&id=1FUDeq17QBZdvROSiaYlRggH4WUtav_Pe"
+        ]
+    }
+]

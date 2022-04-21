@@ -1,0 +1,51 @@
+[
+    {
+        "carId": "1311",
+        "category": "SUV",
+        "brand": "Ford",
+        "model": "Ecosport",
+        "color": "Orange",
+        "priceDay": "38",
+        "license": "BIY-179",
+        "passengers": "5",
+        "baggages": "5",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1W1A5nR-NmFB_xcYs6bhRxgoiaB-AK7MP",
+            "https://drive.google.com/uc?export=view&id=1qFD36J2icKOWcJNWACHDB_TIbrQx3NsB",
+            "https://drive.google.com/uc?export=view&id=1RhvX6Gd98DNAzU5kAofuIAf2ICb1Q_o7"
+        ]
+    },
+    {
+        "carId": "1312",
+        "category": "SUV",
+        "brand": "Chevrolet",
+        "model": "Tracker",
+        "color": "Platinum Grey",
+        "priceDay": "35",
+        "license": "MOI-317",
+        "passengers": "5",
+        "baggages": "5",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=13PYon6mdL3PBMkHkAdEiJwmiQBsIWfLT",
+            "https://drive.google.com/uc?export=view&id=1qZ1WiMXYqEGSbQERh4I0D9zx_iZDGn8v",
+            "https://drive.google.com/uc?export=view&id=1fn_hQcCi50M4ZMDyfadYlm4Q61sfWYFm"
+        ]
+    },
+    {
+        "carId": "1313",
+        "category": "SUV",
+        "brand": "Volkswagen",
+        "model": "Tcross",
+        "color": "White",
+        "priceDay": "38",
+        "license": "MNS-317",
+        "passengers": "5",
+        "baggages": "5",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1Scpdnym2tUwcP2kksPxNasqb-S1fNEBg",
+            "https://drive.google.com/uc?export=view&id=1R4azPe9BGebc1KwxeO5C6A3EyYSuIn61",
+            "https://drive.google.com/uc?export=view&id=1kkopuepbtxykDBXBtm9QXozwzuz7cHCE"
+        ]
+    }
+
+]
