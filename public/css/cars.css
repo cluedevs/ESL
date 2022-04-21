@@ -50,9 +50,24 @@
   border-right: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
   text-decoration: none;
-  width: 140px !important;
+  width: 160px !important;
 
 }
+
+.reservation-cta:hover {
+  color: #fff;
+  transform: scale(1.1)
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(9, 9, 9, 0.531);
+  border-radius: 50px;
+  margin: 10px;
+  padding: 10px;
+
+}
+
 
 
 @media (max-width: 768px) {

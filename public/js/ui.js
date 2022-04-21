@@ -1,17 +1,25 @@
 // URL mapping, from hash to a function that responds to that URL action
 const router = {
   "/": () => showContent("content-home"),
-  "/cars": () => {
-    loadCarsData()
-    showContent("content-cars")
-  },
+  "/rent": () => showContent("content-rent-car"),
+  "/compact": () => {
+    loadCompactData()
+    showContent("content-compact")},
+  "/sedan": () => {
+    loadSedanData()
+    showContent("content-sedan")},
+  "/suv": () => {
+  loadSuvData()
+  showContent("content-suv")},
+  "/pickup": () =>{
+  loadPickupData()
+  showContent("content-pickup")},
+  "/reservations": () => showContent("content-reservations"),
   "/profile": () =>
     requireAuth(() => showContent("content-profile"), "/profile"),
-  "/rent": () => requireAuth(() => showContent("content-rent-car"), "/rent"),
-  "/reservations": () =>
-    requireAuth(() => showContent("content-reservations"), "/reservations"),
   "/login": () => login(),
 };
+
 
 //Declare helper functions
 
@@ -82,7 +90,7 @@ const updateUI = async () => {
       eachElement(".profile-image", (e) => (e.src = user.picture));
       eachElement(".user-name", (e) => (e.innerText = user.name));
       eachElement(".user-email", (e) => (e.innerText = user.email));
-      eachElement(".user-nickname", (e) => (e.innerText = `Codigo de Descuento: 15OFF${user.nickname}`));
+      eachElement(".user-nickname", (e) => (e.innerText = `Personal Descount Code: 15%OFF${user.nickname}`));
       eachElement(".auth-invisible", (e) => e.classList.add("hidden"));
       eachElement(".auth-visible", (e) => e.classList.remove("hidden"));
     } else {

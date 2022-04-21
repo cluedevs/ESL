@@ -73,16 +73,20 @@ const requireAuth = async (fn, targetUrl) => {
 const loadPages = async () => {
   let home = await fetch("view/home.html");
   document.getElementById("content-home").innerHTML = await home.text();
-  let cars = await fetch("view/cars.html");
-  document.getElementById("content-cars").innerHTML = await cars.text();
+  let compact = await fetch("view/compact.html");
+  document.getElementById("content-compact").innerHTML = await compact.text();
+  let sedan = await fetch("view/sedan.html");
+  document.getElementById("content-sedan").innerHTML = await sedan.text();
+  let suv = await fetch("view/suv.html");
+  document.getElementById("content-suv").innerHTML = await suv.text();
+  let pickup = await fetch("view/pickup.html");
+  document.getElementById("content-pickup").innerHTML = await pickup.text();
   let profile = await fetch("view/profile.html");
   document.getElementById("content-profile").innerHTML = await profile.text();
   let rentYourCar = await fetch("view/rentYourCar.html");
-  document.getElementById("content-rent-car").innerHTML =
-    await rentYourCar.text();
+  document.getElementById("content-rent-car").innerHTML = await rentYourCar.text();
   let reservations = await fetch("view/reservations.html");
-  document.getElementById("content-reservations").innerHTML =
-    await reservations.text();
+  document.getElementById("content-reservations").innerHTML = await reservations.text();
 };
 
 // Will run when page finishes loading

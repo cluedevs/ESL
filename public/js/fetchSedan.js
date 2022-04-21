@@ -1,5 +1,5 @@
-function loadCarsData() {
-  fetch('data/cars.json')
+function loadSedanData() {
+  fetch('data/sedan.json')
   .then(res => {
     return res.json();
   })
@@ -7,12 +7,12 @@ function loadCarsData() {
 
     data.forEach((current)=>{
         console.log(current.carId);
-        let badge = document.createElement('div');
-        badge.innerHTML = `
+        let badgeSedan = document.createElement('div');
+        badgeSedan.innerHTML = `
         <div class="car-wrapper">
 
         <div class="slider-wrapper">
-          <h3 class="title-cars"> ${current.category} </h3>
+          <h3 class="title-cars"> ${current.model} </h3>
         <div id="carouselControl${current.carId}" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -87,7 +87,7 @@ function loadCarsData() {
           </div>
           </div>
           `;
-      document.getElementById('cars').appendChild(badge);
+      document.getElementById('sedan').appendChild(badgeSedan);
 
     })
 

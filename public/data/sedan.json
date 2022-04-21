@@ -1,0 +1,52 @@
+[
+
+    {
+        "carId": "1211",
+        "category": "SEDAN",
+        "brand": "Volkswagen",
+        "model": "Virtus",
+        "color": "Grey",
+        "priceDay": "28",
+        "license": "RFX-804",
+        "passengers": "5",
+        "baggages": "3",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1G8ojSX6gym5mygALEeWpVAQSMvbTOIvB",
+            "https://drive.google.com/uc?export=view&id=1Famtfu-aTyKWnBXdtR-s5hIpm4iEITJM",
+            "https://drive.google.com/uc?export=view&id=1tSlLoQ-buPVRKbcmxGl8xzQqnzO_j15e"
+        ]
+    },
+    {
+        "carId": "1212",
+        "category": "SEDAN",
+        "brand": "Chevrolet",
+        "model": "Prisma",
+        "color": "Dark Grey",
+        "priceDay": "26",
+        "license": "XXS-387",
+        "passengers": "5",
+        "baggages": "3",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1jEbJyezJ0F7uFfNJeSC__n34wFRtJsqW",
+            "https://drive.google.com/uc?export=view&id=1FxxseXhNG-6FoBg25y37VsOPWfsYZkJz",
+            "https://drive.google.com/uc?export=view&id=18hXMPnBqThUhXYHLVcjnziwgq34lnEL5"
+        ]
+    },
+    {
+        "carId": "1213",
+        "category": "SEDAN",
+        "brand": "Ford",
+        "model": "Fiesta Kinetic",
+        "color": "Dark grey",
+        "priceDay": "30",
+        "license": "PPY-768",
+        "passengers": "5",
+        "baggages": "3",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1SEiT7LBVsvORNdzvL3poNw6BSX7eQ23-",
+            "https://drive.google.com/uc?export=view&id=1_3dMIoFBAUBYgw6WChsmoVXeYdCZPuHI",
+            "https://drive.google.com/uc?export=view&id=1fBJOpXfNVQ3JZI3Z2cPiAn1sOL9M_RfS"
+        ]
+    }
+
+]
