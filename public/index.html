@@ -1,181 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/cars.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<title>Rental Car</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="/css/main.css" />
-	<link rel="stylesheet" href="/css/cars.css" />
-	<link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<title>Rental Car</title>
-</head>
-
-<body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-color">
-			<div class="container-fluid">
-				<a class="navbar-brand fs-3 fw-bold text" href="/"> RENTAL CARS</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
-						<li class="nav-item ms-5">
-							<a class="nav-link" aria-current="page" href="./index.html">Home</a>
-						</li>
-						<li class="nav-item  ms-5 dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false">
-								Cars
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item nav-link route-link" href="/compact">Compact</a></li>
-								<li><a class="dropdown-item nav-link route-link" href="/sedan">Sedan</a></li>
-								<li><a class="dropdown-item nav-link route-link" href="/suv">SUV</a></li>
-								<li><a class="dropdown-item nav-link route-link" href="/pickup">Pickup</a>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-color">
+				<div class="container-fluid">
+					<a class="navbar-brand fs-3 fw-bold text" href="/"> RENTAL CARS</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+							<li class="nav-item ms-5">
+								<a class="nav-link" aria-current="page" href="./index.html"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item ms-5 dropdown">
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarDropdownMenuLink"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Cars
+								</a>
+								<ul
+									class="dropdown-menu"
+									aria-labelledby="navbarDropdownMenuLink"
+								>
+									<li>
+										<a class="dropdown-item nav-link route-link" href="/compact"
+											>Compact</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item nav-link route-link" href="/sedan"
+											>Sedan</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item nav-link route-link" href="/suv"
+											>SUV</a
+										>
+									</li>
+									<li>
+										<a class="dropdown-item nav-link route-link" href="/pickup"
+											>Pickup</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li class="nav-item ms-5">
+								<a class="route-link" href="/rent">Rent your car</a>
+							</li>
+							<li class="nav-item ms-5">
+								<a class="route-link" href="/reservations">Reservations</a>
+							</li>
+						</ul>
+						<div class="d-flex">
+							<ul class="navbar-nav d-none d-md-block">
+								<!-- Login button: show if NOT authenticated -->
+								<li class="nav-item auth-invisible">
+									<button
+										id="qsLoginBtn"
+										onclick="login()"
+										class="btn btn-margin auth-invisible hidden btn-login"
+									>
+										Log in
+									</button>
+								</li>
+								<!-- / Login button -->
+								<!-- Fullsize dropdown: show if authenticated -->
+								<li class="nav-item dropdown auth-visible hidden li-login">
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="profileDropDown"
+										data-toggle="dropdown"
+									>
+										<!-- Profile image should be set to the profile picture from the id token -->
+										<img
+											alt="Profile picture"
+											class="nav-user-profile profile-image rounded-circle"
+											width="50"
+										/>
+									</a>
+									<div class="dropdown-menu">
+										<!-- Show the user's full name from the id token here -->
+										<div class="dropdown-header nav-user-name user-name"></div>
+										<a
+											href="/profile"
+											class="dropdown-item dropdown-profile route-link"
+										>
+											<i class="fas fa-user mr-3"></i> Profile
+										</a>
+										<a
+											href="#"
+											class="dropdown-item"
+											id="qsLogoutBtn"
+											onclick="logout()"
+										>
+											<i class="fas fa-power-off mr-3"></i> Log out
+										</a>
+									</div>
+								</li>
+								<!-- /Fullsize dropdown -->
 							</ul>
-						</li>
-						<li class="nav-item ms-5">
-							<a class="route-link" href="/rent">Rent your car</a>
-						</li>
-						<li class="nav-item ms-5">
-							<a class="route-link" href="/reservations">Reservations</a>
-						</li>
-					</ul>
-					<div class="d-flex">
-						<ul class="navbar-nav d-none d-md-block">
-							<!-- Login button: show if NOT authenticated -->
-							<li class="nav-item auth-invisible">
-								<button id="qsLoginBtn" onclick="login()"
-									class="btn btn-margin auth-invisible hidden btn-login">
+
+							<!-- Responsive login button: show if NOT authenticated -->
+							<ul class="navbar-nav d-md-none auth-invisible">
+								<button
+									class="btn btn-primary btn-block auth-invisible hidden"
+									id="qsLoginBtn"
+									onclick="login()"
+								>
 									Log in
 								</button>
-							</li>
-							<!-- / Login button -->
-							<!-- Fullsize dropdown: show if authenticated -->
-							<li class="nav-item dropdown auth-visible hidden li-login">
-								<a class="nav-link dropdown-toggle" href="#" id="profileDropDown" data-toggle="dropdown">
-									<!-- Profile image should be set to the profile picture from the id token -->
-									<img alt="Profile picture" class="nav-user-profile profile-image rounded-circle" width="50" />
-								</a>
-								<div class="dropdown-menu">
-									<!-- Show the user's full name from the id token here -->
-									<div class="dropdown-header nav-user-name user-name"></div>
-									<a href="/profile" class="dropdown-item dropdown-profile route-link">
-										<i class="fas fa-user mr-3"></i> Profile
-									</a>
-									<a href="#" class="dropdown-item" id="qsLogoutBtn" onclick="logout()">
-										<i class="fas fa-power-off mr-3"></i> Log out
-									</a>
-								</div>
-							</li>
-							<!-- /Fullsize dropdown -->
-						</ul>
+							</ul>
+							<!-- /Responsive login button -->
 
-						<!-- Responsive login button: show if NOT authenticated -->
-						<ul class="navbar-nav d-md-none auth-invisible">
-							<button class="btn btn-primary btn-block auth-invisible hidden" id="qsLoginBtn" onclick="login()">
-								Log in
-							</button>
-						</ul>
-						<!-- /Responsive login button -->
+							<!-- Responsive profile dropdown: show if authenticated -->
+							<ul
+								class="navbar-nav d-md-none auth-visible hidden justify-content-between"
+								style="min-height: 125px"
+							>
+								<li class="nav-item">
+									<span class="user-info">
+										<!-- Profile image should be set to the profile picture from the id token -->
+										<img
+											alt="Profile picture"
+											class="nav-user-profile d-inline-block profile-image rounded-circle mr-3"
+											width="50"
+										/>
+										<!-- Show the user's full name from the id token here -->
+										<h6 class="d-inline-block nav-user-name user-name"></h6>
+									</span>
+								</li>
+								<li>
+									<i class="fas fa-user mr-3"></i>
+									<a href="/profile" class="route-link">Profile</a>
+								</li>
 
-						<!-- Responsive profile dropdown: show if authenticated -->
-						<ul class="navbar-nav d-md-none auth-visible hidden justify-content-between" style="min-height: 125px">
-							<li class="nav-item">
-								<span class="user-info">
-									<!-- Profile image should be set to the profile picture from the id token -->
-									<img alt="Profile picture" class="nav-user-profile d-inline-block profile-image rounded-circle mr-3"
-										width="50" />
-									<!-- Show the user's full name from the id token here -->
-									<h6 class="d-inline-block nav-user-name user-name"></h6>
-								</span>
-							</li>
-							<li>
-								<i class="fas fa-user mr-3"></i>
-								<a href="/profile" class="route-link">Profile</a>
-							</li>
-
-							<li>
-								<i class="fas fa-power-off mr-3"></i>
-								<a class="btn-out" href="#" id="qsLogoutBtn" onclick="logout()">Log out</a>
-							</li>
-						</ul>
+								<li>
+									<i class="fas fa-power-off mr-3"></i>
+									<a
+										class="btn-out"
+										href="#"
+										id="qsLogoutBtn"
+										onclick="logout()"
+										>Log out</a
+									>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
-		</nav>
-	</header>
+			</nav>
+		</header>
 
-	<div id="main-content">
-		<!-- Main Page -->
-		<div class="page" id="content-home"></div>
-		<!-- Profile Page -->
-		<div class="page" id="content-profile"></div>
-		<!-- Cars Pages -->
-		<div class="page" id="content-compact"></div>
-		<div class="page" id="content-sedan"></div>
-		<div class="page" id="content-suv"></div>
-		<div class="page" id="content-pickup"></div>
-		<!-- Rent Car Page -->
-		<div class="page" id="content-rent-car"></div>
-		<!-- Reservations Page -->
-		<div class="page" id="content-reservations"></div>
-	</div>
-
-	<footer class="footer-basic">
-		<div class="social">
-			<a href="#"><i class="icon ion-social-instagram"></i></a>
-			<a href="#"><i class="icon ion-social-twitter"></i></a>
-			<a href="#"><i class="icon ion-social-facebook"></i></a>
+		<div id="main-content">
+			<!-- Main Page -->
+			<div class="page" id="content-home"></div>
+			<!-- Profile Page -->
+			<div class="page" id="content-profile"></div>
+			<!-- Cars Pages -->
+			<div class="page" id="content-compact"></div>
+			<div class="page" id="content-sedan"></div>
+			<div class="page" id="content-suv"></div>
+			<div class="page" id="content-pickup"></div>
+			<!-- Rent Car Page -->
+			<div class="page" id="content-rent-car"></div>
+			<!-- Reservations Page -->
+			<div class="page" id="content-reservations"></div>
 		</div>
-		<ul class="list-inline">
-			<li class="list-inline-item">
-				<a class="route-link" href="/">Home</a>
-			</li>
-			<li class="list-inline-item">
-				<a class="route-link" href="#navbarDropdownMenuLink">Cars</a>
-			</li>
-			<li class="list-inline-item">
-				<a class="route-link" href="/rent">Rent your car</a>
-			</li>
-			<li class="list-inline-item">
-				<a class="route-link" href="/reservations">Reservations</a>
-			</li>
-		</ul>
-		<p class="copyright">RENTAL CARS © 2022</p>
-	</footer>
 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-		</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-		</script>
+		<footer class="footer-basic">
+			<div class="social">
+				<a href="#"><i class="icon ion-social-instagram"></i></a>
+				<a href="#"><i class="icon ion-social-twitter"></i></a>
+				<a href="#"><i class="icon ion-social-facebook"></i></a>
+			</div>
+			<ul class="list-inline">
+				<li class="list-inline-item">
+					<a class="route-link" href="/">Home</a>
+				</li>
+				<li class="list-inline-item">
+					<a class="route-link" href="#navbarDropdownMenuLink">Cars</a>
+				</li>
+				<li class="list-inline-item">
+					<a class="route-link" href="/rent">Rent your car</a>
+				</li>
+				<li class="list-inline-item">
+					<a class="route-link" href="/reservations">Reservations</a>
+				</li>
+			</ul>
+			<p class="copyright">RENTAL CARS © 2022</p>
+		</footer>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="js/ui.js"></script>
-	<script src="js/app.js"></script>
-	<script src="./js/fetchCompact.js"></script>
-	<script src="./js/fetchSedan.js"></script>
-	<script src="./js/fetchSuv.js"></script>
-	<script src="./js/fetchPickup.js"></script>
-	<script type="module" src="./js/cars.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+			integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+			integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+			crossorigin="anonymous"
+		></script>
 
-</body>
-
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="sweetalert2.all.min.js"></script>
+		<script src="js/ui.js"></script>
+		<script src="js/app.js"></script>
+		<script src="./js/fetchCompact.js"></script>
+		<script src="./js/fetchSedan.js"></script>
+		<script src="./js/fetchSuv.js"></script>
+		<script src="./js/fetchPickup.js"></script>
+		<script src="./js/user/userApiCall.js"></script>
+		<script src="./js/reservations/reservationApiCall.js"></script>
+		<script type="module" src="./js/cars.js"></script>
+	</body>
 </html>

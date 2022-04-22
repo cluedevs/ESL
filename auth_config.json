@@ -1,5 +1,6 @@
 {
-    "domain": "dev-4pls1z4n.us.auth0.com",
-    "clientId": "9r6uejJtGwqqFFZlwE6OGwDOZViMiMHg",
-    "audience": "https://rental-car-api.com/v1"
+	"domain": "dev-4pls1z4n.us.auth0.com",
+	"clientId": "9r6uejJtGwqqFFZlwE6OGwDOZViMiMHg",
+	"audience": "https://rental-car-api.com/v1",
+	"api": "https://dxlxbmshb8.execute-api.us-east-1.amazonaws.com/PRE"
 }

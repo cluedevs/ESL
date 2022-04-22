@@ -13,59 +13,65 @@
 	</div>
 	<div class="contact-form">
 		<h2>Reserve with us!</h2>
-		<form
-			action="https://formspree.io/f/mjvlavyo"
-			class="contact"
-			method="post"
+		<div class="loader hidden"></div>
+		<input
+			type="text"
+			class="text-box reservation-form-fullname"
+			name="Name"
+			placeholder="Full Name"
+			required
+			disabled
+		/>
+		<input
+			type="email"
+			class="text-box reservation-form-email"
+			name="Email"
+			placeholder="Email"
+			required
+			disabled
+		/>
+		<input
+			type="number"
+			class="text-box reservation-form-phone"
+			name="Phone"
+			placeholder="Phone"
+			required
+		/>
+		<select
+			class="text-box reservation-form-car-type"
+			name="What car are you interested in?"
 		>
-			<input
-				type="text"
-				class="text-box"
-				name="Name"
-				placeholder="Full Name"
-				required
-			/>
-			<input
-				type="email"
-				class="text-box"
-				name="Email"
-				placeholder="Email"
-				required
-			/>
-			<input
-				type="number"
-				class="text-box"
-				name="Phone"
-				placeholder="Phone"
-				required
-			/>
-			<select class="text-box" name="What car are you interested in?">
-				<option>Select an option...</option>
-				<option>Compact</option>
-				<option>Sedan</option>
-				<option>SUV</option>
-				<option>Pickup</option>
-			</select>
-			<input
-				class="text-box"
-				id="rental-start"
-				name="rental-start"
-				type="datetime-local"
-				value="2022-4-11T08:30"
-				required
-			/>
-			<input
-				class="text-box"
-				id="rental-end"
-				name="rental-end"
-				placeholder="Enter a date and time for return the car:"
-				type="datetime-local"
-				value="2022-4-1T08:30"
-			  required
-			/>
-			<textarea name="Message" placeholder="Message" rows="6" required></textarea>
-			<button class="form-button" type="submit">Reserve</button>
-		</form>
+			<option>Select an option...</option>
+			<option>Economic / Compact</option>
+			<option>Sedan / Family car</option>
+			<option>SUV</option>
+			<option>Pickup</option>
+		</select>
+		<input
+			class="text-box reservation-form-start"
+			id="rental-start"
+			name="rental-start"
+			type="datetime-local"
+			value="2022-4-11 08:30"
+			required
+		/>
+		<input
+			class="text-box reservation-form-end"
+			id="rental-end"
+			name="rental-end"
+			placeholder="Enter a date and time for return the car:"
+			type="datetime-local"
+			value="2022-4-1 08:30"
+			required
+		/>
+		<textarea
+			class="text-box reservation-form-description"
+			name="Message"
+			placeholder="Message"
+			rows="6"
+			required
+		></textarea>
+		<button class="form-button reservation-form-btn">Reserve</button>
 	</div>
 </div>
 <!-- Contact section end  -->
