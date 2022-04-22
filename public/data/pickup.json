@@ -1,0 +1,51 @@
+[
+    {
+        "carId": "1411",
+        "category": "PICKUP",
+        "brand": "Ford",
+        "model": "Ranger",
+        "color": "White",
+        "priceDay": "50",
+        "license": "KEL-098",
+        "passengers": "5",
+        "baggages": "8",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1CrIO0aDlYyEr1aCnHsmzpUU9izLtxWXc",
+            "https://drive.google.com/uc?export=view&id=1qo8OJFK0_9uBumhKqtexUcj_OqR7qa26",
+            "https://drive.google.com/uc?export=view&id=1Ocokxy59Jo2xwAYCJ_zrrSrLxdRkM2lo"
+        ]
+    },
+    {
+        "carId": "1412",
+        "category": "PICKUP",
+        "brand": "Chevrolet",
+        "model": "S10",
+        "color": "Black",
+        "priceDay": "50",
+        "license": "YUE-253",
+        "passengers": "5",
+        "baggages": "5",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=1ESVmKCdu05YxS48FUyoPRnHm7FTkX9Iv",
+            "https://drive.google.com/uc?export=view&id=1lusZ8dPYSkKitRyLU4YuVT85ZZuy7MV_",
+            "https://drive.google.com/uc?export=view&id=1GXlm3W9eIQRlvMD2QgBhOWrQ7MOTP_UV"
+        ]
+    },
+    {
+        "carId": "1413",
+        "category": "PICKUP",
+        "brand": "Volkswagen",
+        "model": "Amarok",
+        "color": "Dark grey",
+        "priceDay": "40",
+        "license": "IHS-178",
+        "passengers": "5",
+        "baggages": "7",
+        "pics": [
+            "https://drive.google.com/uc?export=view&id=15Sn7i7Q7khQeFOFYQcJL4WhSSaMx8fju",
+            "https://drive.google.com/uc?export=view&id=1Uf4SVcxhT55MzeiC4_iKB3nVNZD1ZMfI",
+            "https://drive.google.com/uc?export=view&id=1BYMuQmYB8_6DI6f7XFFHoSS9ceQdFyjA"
+        ]
+    }
+
+]

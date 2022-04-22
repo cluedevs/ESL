@@ -1,5 +1,5 @@
-function loadCarsData() {
-  fetch('data/cars.json')
+function loadPickupData() {
+  fetch('data/pickup.json')
   .then(res => {
     return res.json();
   })
@@ -7,12 +7,12 @@ function loadCarsData() {
 
     data.forEach((current)=>{
         console.log(current.carId);
-        let badge = document.createElement('div');
-        badge.innerHTML = `
+        let badgePickup = document.createElement('div');
+        badgePickup.innerHTML = `
         <div class="car-wrapper">
 
         <div class="slider-wrapper">
-          <h3 class="title-cars"> ${current.category} </h3>
+          <h3 class="title-cars"> ${current.model} </h3>
         <div id="carouselControl${current.carId}" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -37,6 +37,8 @@ function loadCarsData() {
           <div class="details">
           <h3>Details</h3>
           <p>${current.brand} ${current.model} or similar </p>
+          <p> Color ${current.color}
+          </p>
           <p>
           ${current.baggages}  Baggages
           </p>
@@ -81,11 +83,11 @@ function loadCarsData() {
             A similar car with the same characteristics can be provided
             </li>
           </ul>
-          <a class="route-link reservation-cta" href="/reservations" >Reserve now!</a>
+          <a class="route-link reservation-cta" href="/reservations" >RESERVE NOW!</a>
           </div>
           </div>
           `;
-      document.getElementById('cars').appendChild(badge);
+      document.getElementById('pickup').appendChild(badgePickup);
 
     })
 

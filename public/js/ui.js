@@ -5,11 +5,27 @@ const router = {
     loadCarsData();
     showContent("content-cars");
   },
+  "/rent": () => showContent("content-rent-car"),
+  "/compact": () => {
+    loadCompactData();
+    showContent("content-compact");
+  },
+  "/sedan": () => {
+    loadSedanData();
+    showContent("content-sedan");
+  },
+  "/suv": () => {
+    loadSuvData();
+    showContent("content-suv");
+  },
+  "/pickup": () => {
+    loadPickupData();
+    showContent("content-pickup");
+  },
   "/profile": () => {
     updateProfile();
     requireAuth(() => showContent("content-profile"), "/profile");
   },
-  "/rent": () => requireAuth(() => showContent("content-rent-car"), "/rent"),
   "/reservations": () =>
     requireAuth(() => showContent("content-reservations"), "/reservations"),
   "/login": () => login(),
@@ -108,7 +124,7 @@ const updateUI = async () => {
       eachElement(".user-email", (e) => (e.innerText = user.email));
       eachElement(
         ".user-nickname",
-        (e) => (e.innerText = `Codigo de Descuento: 15OFF${user.nickname}`)
+        (e) => (e.innerText = `Personal Descount Code: 15%OFF${user.nickname}`)
       );
       eachElement(".auth-invisible", (e) => e.classList.add("hidden"));
       eachElement(".auth-visible", (e) => e.classList.remove("hidden"));
