@@ -1,9 +1,10 @@
 # Rental Car
 
 ## Requirements
-* Nodejs
-  * Auht0 Library
-  * Express
+
+- Nodejs
+  - Auht0 Library
+  - Express
 
 ## Running the Application
 
@@ -26,3 +27,7 @@ This version of the application uses an [Express](https://expressjs.com) server 
 ```bash
 $ npm run dev
 ```
+
+### Overall Architecture
+
+![alt text](docs/ESL%20Architecture.png)
