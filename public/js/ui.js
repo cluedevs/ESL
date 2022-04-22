@@ -5,12 +5,28 @@ const router = {
     loadCarsData();
     showContent("content-cars");
   },
-  "/profile": () =>
-    requireAuth(() => showContent("content-profile"), "/profile"),
+  "/profile": () => {
+    updateProfile();
+    requireAuth(() => showContent("content-profile"), "/profile");
+  },
   "/rent": () => requireAuth(() => showContent("content-rent-car"), "/rent"),
   "/reservations": () =>
     requireAuth(() => showContent("content-reservations"), "/reservations"),
   "/login": () => login(),
+};
+
+const updateProfile = async () => {
+  const user = await auth0.getUser();
+  const userData = await registerUserApi(user);
+  const reservationItems = userData.reservations.map((reservation) => {
+    return `<li class="list-item">
+				<span>${reservation.start}  -  ${reservation.end}, ${reservation.description} </span>
+		</li>
+    `;
+  });
+  let reservations = document.createElement("div");
+  reservations.innerHTML = reservationItems;
+  document.getElementById("user-reservations-list").appendChild(reservations);
 };
 
 //Declare helper functions
@@ -76,6 +92,16 @@ const updateUI = async () => {
       // );
       registerUserApi(user);
       document.querySelectorAll("pre code").forEach(hljs.highlightBlock);
+
+      // update contact form
+      eachElement(
+        ".reservation-form-fullname",
+        (e) => (e.placeholder = user.name)
+      );
+      eachElement(
+        ".reservation-form-email",
+        (e) => (e.placeholder = user.email)
+      );
 
       eachElement(".profile-image", (e) => (e.src = user.picture));
       eachElement(".user-name", (e) => (e.innerText = user.name));

@@ -98,6 +98,9 @@ window.onload = async () => {
   }
 
   const bodyElement = document.getElementsByTagName("body")[0];
+  const reservationBtn = document.getElementsByClassName(
+    "reservation-form-btn"
+  )[0];
 
   // Listen out for clicks on any hyperlink that navigates to a #/ URL
   bodyElement.addEventListener("click", (e) => {
@@ -108,6 +111,46 @@ window.onload = async () => {
         e.preventDefault();
         window.history.pushState({ url }, {}, url);
       }
+    }
+  });
+
+  reservationBtn.addEventListener("click", async (e) => {
+    const phone = document.getElementsByClassName("reservation-form-phone")[0]
+      .value;
+    const carType = document.getElementsByClassName(
+      "reservation-form-car-type"
+    )[0].value;
+    const start = document.getElementsByClassName("reservation-form-start")[0]
+      .value;
+    const end = document.getElementsByClassName("reservation-form-end")[0]
+      .value;
+    const description = document.getElementsByClassName(
+      "reservation-form-description"
+    )[0].value;
+
+    if (phone && carType && start && end && description) {
+      const user = await auth0.getUser();
+      const reservation = {
+        start: start,
+        end: end,
+        phone: phone,
+        car_type: carType,
+        description: description,
+      };
+      const loader = document.getElementsByClassName("loader")[0];
+      loader.classList.remove("hidden");
+      registerReservationApi(user, reservation).then((response) => {
+        if (response) {
+          Swal.fire("Reservation was done!");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!, try out later",
+          });
+        }
+        loader.classList.add("hidden");
+      });
     }
   });
 

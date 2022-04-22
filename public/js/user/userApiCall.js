@@ -22,8 +22,7 @@ const registerUserApi = async (user) => {
 
       // Fetch the JSON result
       const responseData = await response.json();
-      console.log(responseData);
-      // return responseData;
+      return responseData;
     }
   } catch (e) {
     // Display errors in the console
